@@ -32,7 +32,7 @@ async getInstance(id: string): Promise<Instance>
 **Example:**
 
 ```typescript
-const instance = await client.getInstance('0920582c7ff041399e34823a0be62549');
+const instance = await client.getInstance('INSTANCE_ID');
 console.log(`Instance ${instance.name || instance.id} is ${instance.status}`);
 ```
 
@@ -52,7 +52,7 @@ async updateInstance(id: string, data: InstanceModificationRequest): Promise<Ins
 **Example:**
 
 ```typescript
-const updatedInstance = await client.updateInstance('0920582c7ff041399e34823a0be62549', {
+const updatedInstance = await client.updateInstance('INSTANCE_ID', {
   name: 'My Renamed Instance'
 });
 console.log(`Instance renamed to: ${updatedInstance.name}`);
@@ -122,7 +122,7 @@ async restartInstance(data: InstanceRestartRequest): Promise<InstanceRestartResp
 
 ```typescript
 const restartResponse = await client.restartInstance({
-  instance_ids: ['0920582c7ff041399e34823a0be62549']
+  instance_ids: ['INSTANCE_ID']
 });
 
 console.log(`Restarted ${restartResponse.restarted_instances.length} instances`);
@@ -144,7 +144,7 @@ async terminateInstance(data: InstanceTerminateRequest): Promise<InstanceTermina
 
 ```typescript
 const terminateResponse = await client.terminateInstance({
-  instance_ids: ['0920582c7ff041399e34823a0be62549']
+  instance_ids: ['INSTANCE_ID']
 });
 
 console.log(`Terminated ${terminateResponse.terminated_instances.length} instances`);

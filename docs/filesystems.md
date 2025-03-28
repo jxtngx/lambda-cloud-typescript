@@ -66,7 +66,7 @@ async deleteFilesystem(id: string): Promise<FilesystemDeleteResponse>
 
 ```typescript
 try {
-  const result = await client.deleteFilesystem('398578a2336b49079e74043f0bd2cfe8');
+  const result = await client.deleteFilesystem('FILESYSTEM_ID');
   console.log(`Deleted filesystem(s) with IDs: ${result.deleted_ids.join(', ')}`);
 } catch (error) {
   console.error('Failed to delete filesystem:', error.message);

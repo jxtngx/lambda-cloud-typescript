@@ -48,7 +48,7 @@ const launchResponse = await client.launchInstance({
   instance_type_name: 'gpu_1x_a10',
   ssh_key_names: ['my-ssh-key'],
   image: {
-    id: '43336648-096d-4cba-9aa2-f9bb7727639d'
+    id: 'IMAGE_ID'
   }
 });
 ```

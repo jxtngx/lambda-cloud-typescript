@@ -37,7 +37,7 @@ async addSSHKey(data: AddSSHKeyRequest): Promise<SSHKey | GeneratedSSHKey>
 ```typescript
 const key = await client.addSSHKey({
   name: 'my-macbook-key',
-  public_key: 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICN+lJwsONkwrdsSnQsu1ydUkIuIg5oOC+Eslvmtt60T user@hostname'
+  public_key: 'PUBLIC_KEY'
 });
 
 console.log(`Added key: ${key.name} (${key.id})`);
@@ -75,6 +75,6 @@ async deleteSSHKey(id: string): Promise<EmptyResponse>
 **Example:**
 
 ```typescript
-await client.deleteSSHKey('ddf9a910ceb744a0bb95242cbba6cb50');
+await client.deleteSSHKey('A_KEY_ID');
 console.log('SSH key deleted successfully');
 ```

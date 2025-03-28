@@ -65,7 +65,7 @@ const newRules = await client.setFirewallRules({
     {
       protocol: SecurityGroupRuleProtocol.TCP,
       port_range: [8888, 8888],
-      source_network: '203.0.113.0/24',
+      source_network: '0.0.0.0/0',
       description: 'Allow Jupyter access from office network'
     }
   ]
@@ -90,7 +90,7 @@ enum SecurityGroupRuleProtocol {
 ## Important Notes
 
 1. The `port_range` field is required for TCP, UDP, and ALL protocols, but not allowed for ICMP
-2. Source networks must be specified in CIDR notation (e.g., '192.168.1.0/24')
+2. Source networks must be specified in CIDR notation
 3. Use '0.0.0.0/0' to allow traffic from any source
 4. Firewall rules do not apply in the 'us-south-1' region
 5. The `setFirewallRules` method replaces ALL existing rules, so make sure to include all rules you want to keep

@@ -13,7 +13,8 @@ This TypeScript client provides a convenient way to interact with the Lambda Clo
 ## Installation
 
 ```bash
-npm install lambda-cloud-typescript
+# install directly from GitHub
+pnpm add github:jxtngx/lambda-cloud-typescript
 ```
 
 ## Getting Started
