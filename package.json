@@ -1,0 +1,25 @@
+{
+  "name": "lambda-cloud-typescript",
+  "version": "1.0.0",
+  "description": "TypeScript client for Lambda Cloud API",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "packageManager": "pnpm@10.7.0",
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@swc/core": "^1.11.13",
+	"@types/node": "^22.13.14",
+    "eslint": "^9.23.0",
+    "eslint-plugin-prettier": "^5.2.5",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "prettier": "^3.5.3",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.3"
+  }
+}
